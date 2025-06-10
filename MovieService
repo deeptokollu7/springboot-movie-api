@@ -1,0 +1,15 @@
+package com.example.demo.service;
+
+import com.example.demo.dto.MovieDTO;
+import org.springframework.data.domain.Page;
+
+public interface MovieService {
+
+    Page<MovieDTO> getAllMovies(int page);
+
+    Page<MovieDTO> getMoviesByGenre(String genre, int page);
+
+    Page<MovieDTO> getMoviesByYear(int year, int page);
+
+    MovieDTO getMovieDetails(String imdbId);
+}
